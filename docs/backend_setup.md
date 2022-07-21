@@ -2,7 +2,7 @@
 
 1. Åpne Visual Studio
 
-2. Velg File -> New Project
+2. Velg File -> New -> Project
 
 3. Fyll ut informasjonen, men pass på at du velger riktig auth type som under:
 

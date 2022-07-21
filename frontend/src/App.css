@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,11 +17,66 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.colour-square,.get-colour-button {
+  height: 200px;
+  width: 200px;
+  border-radius: 12px;
+  box-shadow: inset 1px 2px 4px 2px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.get-colour-button {
+  background-color: hsl(0,100%,50%);
+  color: hsl(180,100%,50%);
+  animation: colourChange infinite linear 3s;
+  height: 200px;
+  width: 200px;
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.get-colour-button:hover {
+  background-color: hsl(0,100%,30%);
+}
+
+@keyframes colourChange {
+  0% {
+    filter: hue-rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    filter: hue-rotate(180deg);
   }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.log-out-button,.log-in-button {
+  background-color: darkred;
+  border: 2px solid red;
+  padding: 8px 14px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.log-out-button:hover {
+  background-color: red;
+}
+
+.log-in-button {
+  background-color: darkgreen;
+  border: 2px solid green;
+}
+
+.log-in-button:hover {
+  background-color: green;
 }
